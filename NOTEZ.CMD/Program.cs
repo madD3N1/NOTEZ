@@ -11,6 +11,8 @@ namespace NOTEZ.CMD
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("\t\tДобро пожаловать в приложение NOTEZ!\t\t");
+
             Console.WriteLine("Введите имя пользователя:");
             var nameUser = Console.ReadLine();
             var testUser = new User(nameUser); // Создание нового User
@@ -26,6 +28,10 @@ namespace NOTEZ.CMD
             var note1 = new Note(titleNote1); // Создание нового Note
 
             notebook1.Notes.Add(note1); // Добавление заметки к списку заметок блокнота пользователя
+
+            Console.Clear();
+
+            Console.WriteLine($"Пользователь: {testUser}\n Блокнот: {testUser}\n Заметка: {note1}");
 
             Console.ReadLine();
         }
