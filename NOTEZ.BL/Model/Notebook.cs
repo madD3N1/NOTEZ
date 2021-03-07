@@ -7,6 +7,7 @@ namespace NOTEZ.BL.Model
     /// <summary>
     /// Блокнот.
     /// </summary>
+    [Serializable]
     public class Notebook
     {
         #region Свойства

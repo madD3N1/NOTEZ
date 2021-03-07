@@ -34,7 +34,7 @@ namespace NOTEZ.BL.Model
             }
 
             Name = name;
-            Notebooks = new List<Notebook>(); // TODO: Переписать, как отдельный метод в UserController.
+            Notebooks = new List<Notebook>();
         }
 
         public override string ToString()

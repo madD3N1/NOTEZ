@@ -63,5 +63,30 @@ namespace NOTEZ.BL.Controller
             }          
         }
 
+        /// <summary>
+        /// Создание блокнота.
+        /// </summary>
+        /// <param name="title"> Название блокнота. </param>
+        public void CreateNotebook(string title)
+        {
+            User.Notebooks.Add(new Notebook(title));
+        }
+
+        /// <summary>
+        /// Создание заметки.
+        /// </summary>
+        /// <param name="titleNotebook"> Название блокнота. </param>
+        /// <param name="titleNote"> Название заметки. </param>
+        public void CreateNote(string titleNotebook, string titleNote)
+        {
+            foreach(var element in User.Notebooks)
+            {
+                if (element.Title == titleNotebook)
+                {
+                    element.Notes.Add(new Note(titleNote));
+                    break;
+                }
+            }
+        }
     }
 }

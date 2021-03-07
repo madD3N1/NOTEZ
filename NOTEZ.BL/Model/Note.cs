@@ -7,6 +7,7 @@ namespace NOTEZ.BL.Model
     /// <summary>
     /// Заметка.
     /// </summary>
+    [Serializable]
     public class Note
     {
         #region Свойства
